@@ -1,0 +1,42 @@
+//Main Class
+
+import java.sql.SQLOutput;
+
+public class Main {
+    public static void main(String[] args) {
+        try{
+            Bank bankAccount= new Bank(5000);
+            bankAccount.withdraw(1000);
+            bankAccount.withdraw(500);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+//Bank Class
+
+public class Bank {
+    public int balance;
+
+    public Bank(int balance){
+        this.balance=balance;
+    }
+    public void withdraw(int amount) throws InsuficientBalanceException{
+        if(amount>balance){
+            throw new InsuficientBalanceException("Insufficient Funds!");
+        }else{
+            System.out.println(balance-amount);
+        }
+
+    }
+}
+
+//InsuficientBalanceException Class
+
+public class InsuficientBalanceException extends Exception{
+    public InsuficientBalanceException(String str){
+        super(str);
+    }
+}
