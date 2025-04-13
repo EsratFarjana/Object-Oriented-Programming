@@ -1,0 +1,76 @@
+//Main Class
+
+public class Main {
+    public static void main(String[] args) {
+        Engine engine = new Engine(5.99);
+        DashBoard dash = new DashBoard(2.55);
+        Volvo vol = new Volvo(566.00, "2000", "2333", engine, dash);
+        vol.drive();
+        vol.stop();
+        vol.changeFuel();
+        vol.changeBattery();
+        vol.model="dggr";
+        vol.company="hjgghj";
+
+    }
+}
+
+//Car Class
+
+public class Car {
+   public String model,company;
+
+   public void drive(){
+       System.out.println("Driving");
+   }
+   public void stop(){
+       System.out.println("stoping");
+   }
+}
+
+//Volvo Class
+
+public class Volvo extends Car{
+    public double price;
+    public String productionYear;
+    public String registrationName;
+    Engine engine;
+    DashBoard dash;
+
+    public Volvo(double price,String productionYear,String registrationName,Engine engine,DashBoard dash){
+        this.price=price;
+        this.productionYear=productionYear;
+        this.registrationName=registrationName;
+        this.engine=engine;
+        this.dash=dash;
+    }
+    public void changeFuel(){
+        System.out.println("Fuel is full");
+    }
+    public void changeBattery(){
+        System.out.println("Battery is Low");
+    }
+
+
+
+}
+
+//Engine Class
+
+public class Engine {
+    public double capacity;
+
+    public Engine (double capacity){
+        this.capacity=capacity;
+    }
+}
+
+//DashBoard Class
+
+public class DashBoard {
+    public double size;
+
+    public DashBoard(double size){
+        this.size=size;
+    }
+}
