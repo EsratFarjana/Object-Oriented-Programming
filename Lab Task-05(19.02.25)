@@ -1,0 +1,49 @@
+//Main Class
+
+public class Main {
+    public static void main(String[] args) {
+        Author author=new Author("Lima","rttrtt");
+     Book book1=new Book("hhghfh",577,author);
+
+
+     book1.display();
+     author.writebook();
+
+    }
+}
+
+//Author Class
+
+public class Author {
+    String name;
+    String frictionname;
+
+    public Author(String name,String frictionname){
+        this.name=name;
+        this.frictionname=frictionname;
+    }
+    public void writebook(){
+        System.out.println("Monalisa");
+    }
+}
+
+//Book class
+
+public class Book {
+
+    String title;
+    int price;
+    Author author;
+
+
+    public Book(String title,int price,Author author){
+        this.title=title;
+        this.price=price;
+        this.author=author;
+
+    }
+    void  display(){
+        System.out.println(title+ " " + price);
+        System.out.println(author.name+ " "+author.frictionname);
+    }
+}
