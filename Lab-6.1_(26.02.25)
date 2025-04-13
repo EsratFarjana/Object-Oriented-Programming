@@ -1,0 +1,66 @@
+//Main Class
+public class Main {
+    public static void main(String[] args) {
+
+        Car myCar = new Car("V8");
+        myCar.startcar();
+
+
+
+
+        Driver driver = new Driver("John");
+        Bus myBus = new Bus(driver);
+        myBus.showDriver();
+    }
+}
+
+//Engine Class
+
+public class Engine {
+    private String type;
+
+    public Engine(String type){
+        this.type=type;
+    }
+
+    public void start(){
+        System.out.println("Stop");
+    }
+}
+
+//Car class
+
+ class Car {
+   private Engine engine;
+
+     Car(String engineType){
+        this.engine=new Engine(engineType);
+    }
+    public void startcar(){
+         engine.start();
+        System.out.println("Startb the car");
+    }
+}
+//Driver Class
+class Driver {
+    String name;
+
+    Driver(String name) {
+        this.name = name;
+    }
+}
+
+//Bus class
+
+class Bus {
+    private Driver driver;
+
+    Bus(Driver driver) {
+        this.driver = driver;
+    }
+
+    void showDriver() {
+        System.out.println("Bus driver is " + driver.name);
+    }
+}
+
