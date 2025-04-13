@@ -1,0 +1,24 @@
+//Method overloading
+
+
+public class Sum {
+    static int sum(int x,int y,int z){
+        return x+y+z;
+    }
+    static double sum(double x,double y,double z){
+        return x+y+z;
+    }
+    static String sum(String x,String y,String z){
+        return x+y+z;
+    }
+
+    public static void main(String[] args) {
+        int myNum1=sum(8,5,2);
+        double myNum2=sum(2.33,1.41,5.55);
+        String myNum3=sum("Esrat ","Farjana ","Lima ");
+
+        System.out.println("int: "+myNum1);
+        System.out.println("double: "+myNum2);
+        System.out.println("String: "+myNum3);
+    }
+}
