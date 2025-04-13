@@ -1,0 +1,96 @@
+//Main class
+
+public class Main1 {
+    public static void main(String[] args) {
+
+        Softwareengineer p1 = new Softwareengineer();
+        HR p2 = new HR();
+        Employee p3 = new Employee();
+
+        System.out.println("Softwareengineer Id: "+p1.id);
+        System.out.println("Softwareengineer Name: "+p1.name);
+        System.out.println("Softwareengineer joining_date: "+p1.joining_date);
+        System.out.println("Softwareengineer Salary: "+p1.salary);
+
+
+        System.out.println("HR Id: "+p2.id);
+        System.out.println("HR Name: "+p2.name);
+        System.out.println("HR joining_date: "+p2.joining_date);
+        System.out.println("HR Salary: "+p2.salary);
+
+        System.out.println("Employee Id: "+p3.id);
+        System.out.println("Employee Name: "+p3.name);
+        System.out.println("Employee joining_date: "+p3.joining_date);
+    }
+
+}
+
+//Address Class
+
+public class Address {
+    String city, state, country;
+
+    public Address(String city, String state, String country) {
+        this.city = city;
+        this.state = state;
+        this.country = country;
+    }
+}
+
+
+//Emp class
+
+public class Emp {
+    int id;
+    String name;
+    Address address;
+
+
+    public Emp(int id, String name, Address address) {
+
+        this.id = id;
+        this.name = name;
+        this.address = address;
+
+
+    }
+
+    void display() {
+        System.out.println(id + " " + name);
+        System.out.println(address.city + " " + address.state + " " + address.country);
+    }
+}
+
+//Bank Class
+
+public class Emp {
+    int id;
+    String name;
+    Address address;
+
+
+    public Emp(int id, String name, Address address) {
+
+        this.id = id;
+        this.name = name;
+        this.address = address;
+
+
+    }
+
+    void display() {
+        System.out.println(id + " " + name);
+        System.out.println(address.city + " " + address.state + " " + address.country);
+    }
+}
+
+//Person class
+
+public class Person {
+
+    void display(){
+        System.out.println("Person is a parent of Employee");
+
+    }
+}
+
