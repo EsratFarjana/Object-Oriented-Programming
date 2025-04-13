@@ -1,0 +1,123 @@
+//Main Class
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Name:");
+        String name=sc.nextLine();
+
+        System.out.print("Enter Age:");
+        int age=sc.nextInt();
+
+        Person myobj=new Person(name,age);
+
+
+
+        System.out.println("Name: "+myobj.getName());
+        System.out.println("Age: "+myobj.getAge());
+    }
+}
+
+//Person Class
+
+public class Person {
+    private String name;
+    private int age;
+public int  id;
+
+public Person(){
+    System.out.println("Default constructor");
+}
+    //constructor
+    public Person(String name,int age){
+        this.name=name;
+        this.age=age;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public int getAge(){
+        return this.age;
+    }
+    public void setName(String newName){
+        this.name=newName;
+    }
+    public void setAge(int newAge){
+        this.age=newAge;
+    }
+
+}
+
+//Employee class
+
+public class Employee {
+    public int id=373;
+    public String name="lima";
+    public String joining_date="11-feb";
+
+}
+class Softwareengineer extends Employee{
+    public double salary=1000;
+
+
+
+    }
+
+
+class HR extends Employee{
+ public   double salary=3444;
+
+
+}
+
+//Vehicle Class
+
+public class Vehicle {
+    protected String brand="Ford";
+    public void honk(){
+        System.out.println("Tuut,tuut");
+    }
+}
+class Car extends Vehicle{
+    private String modelName="Mustang";
+
+    public static void main(String[] args) {
+        Car myCar=new Car();
+
+        myCar.honk();
+
+        System.out.println(myCar.brand+ "  "+myCar.modelName);
+    }
+}
+
+
+//Main1 Class
+
+public class Main1 {
+    public static void main(String[] args) {
+
+        Softwareengineer p1 = new Softwareengineer();
+        HR p2 = new HR();
+        Employee p3 = new Employee();
+
+        System.out.println("Softwareengineer Id: "+p1.id);
+        System.out.println("Softwareengineer Name: "+p1.name);
+        System.out.println("Softwareengineer joining_date: "+p1.joining_date);
+        System.out.println("Softwareengineer Salary: "+p1.salary);
+
+
+        System.out.println("HR Id: "+p2.id);
+        System.out.println("HR Name: "+p2.name);
+        System.out.println("HR joining_date: "+p2.joining_date);
+        System.out.println("HR Salary: "+p2.salary);
+
+        System.out.println("Employee Id: "+p3.id);
+        System.out.println("Employee Name: "+p3.name);
+        System.out.println("Employee joining_date: "+p3.joining_date);
+    }
+
+}
+
+
